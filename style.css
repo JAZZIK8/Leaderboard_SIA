@@ -15,9 +15,14 @@ body {
     color: #e6e6e6;
 }
 
-h1 { margin: 8px 0 12px; letter-spacing: 1.5px; text-align: center; color: #f2f2f2; }
+h1 { 
+    margin: 8px 0 12px; 
+    letter-spacing: 1.5px; 
+    text-align: center; 
+    color: #f2f2f2; 
+}
 
-/* top players avatars */
+/* ===== TOP PLAYERS SECTION ===== */
 .top-players {
     display: flex;
     gap: 18px;
@@ -26,7 +31,6 @@ h1 { margin: 8px 0 12px; letter-spacing: 1.5px; text-align: center; color: #f2f2
     margin-bottom: 18px;
 }
 
-/* top 3 cards */
 .top-card {
     background: #181818;
     border-radius: 12px;
@@ -40,63 +44,352 @@ h1 { margin: 8px 0 12px; letter-spacing: 1.5px; text-align: center; color: #f2f2
     cursor: default;
 }
 
-.top-card.first { width: 220px; transform: translateY(-8px); }
-.top-card:hover, .top-card:focus { transform: translateY(-6px); box-shadow: 0 10px 22px rgba(2, 2, 2, 0.9); }
-
-.top-card .rank { font-size: 14px; color: #ffffff; text-align: center; margin-top: 2px; font-weight: 700; }
-.top-card .rank.crown { font-size: 18px; margin-top: 0; }
-
-.top-card .avatar { width: 76px; height: 76px; border-radius: 50%; background-size: cover; background-position: center; border: 3px solid #ffffff; box-shadow: 0 6px 18px rgba(0,0,0,0.65); }
-.top-card.first .avatar { width: 96px; height: 96px; }
-
-.top-card .label { margin-top: 6px; text-align: center; }
-.top-card .label .name { display: block; font-size: 14px; color: #eaeaea; font-weight: 700; }
-.top-card .label .score { display: block; font-size: 13px; color: #bdbdbd; margin-top: 4px; }
-
-/* labels (name + score) under avatars */
-.top-avatar .label { margin-top: 8px; text-align: center; }
-.top-avatar .label .name { display: block; font-size: 13px; color: #eaeaea; font-weight: 700; letter-spacing: 0.2px; }
-.top-avatar .label .score { display: block; font-size: 12px; color: #bdbdbd; margin-top: 4px; }
-
-/* space between avatars */
-.top-players.avatars-only { margin-bottom: 18px; }
-
-.all-players {display: flex;flex-direction: column;align-items: center;width: 100%;}
-.all-players h3 { margin: 12px 0 8px; text-align: flex-start; color: #f2f2f2; width: 100%; }
-
-.players-header { display: flex; align-items: center; gap: 12px; padding: 10px 12px; width: calc(100% - 32px); max-width: 1200px; margin: 0 auto; font-weight: 700; color: #999999; font-size: 12px; letter-spacing: 0.5px; }
-.players-header .rank-label { flex: 0 0 40px; }
-.players-header .name-label { flex: 1 1 auto; }
-.players-header .score-label { flex: 0 0 70px; text-align: right; }
-
-.players-list { list-style: none; width: calc(100% - 32px); max-width: 1200px; margin: 0 auto; padding: 6px; display: flex; flex-direction: column; gap: 10px; }
-.player { width: 100%; }
-.player { display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 8px; background: #0b0b0b; box-shadow: 0 3px 8px rgba(0,0,0,0.7); transition: transform 160ms ease, box-shadow 160ms ease; }
-.player:hover, .player:focus { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.75); }
-.player .player-avatar { width: 48px; height: 48px; border-radius: 50%; background-size: cover; background-position: center; border: 2px solid #ffffff; flex: 0 0 48px; }
-.player .name { flex: 1 1 auto; font-weight: 600; color: #e8e8e8; }
-.player .score { flex: 0 0 68px; text-align: right; font-weight: 700; color: #cfcfcf; }
-
-@media (max-width: 640px) {
-    .top-players.avatars { gap: 10px; }
-    .top-avatar { width: 68px; height: 68px; }
-    .top-avatar.top { width: 84px; height: 84px; }
-    .top-avatar .avatar { width: 64px; height: 64px; }
-    .top-avatar.top .avatar { width: 76px; height: 76px; }
-    .players-list { gap: 8px; }
-    .player .player-avatar { width: 42px; height: 42px; }
+.top-card.first { 
+    width: 220px; 
+    transform: translateY(-8px); 
 }
 
-.players-list { list-style: none; width: calc(100% - 32px); max-width: 1200px; margin: 0 auto; padding: 6px; display: flex; flex-direction: column; gap: 12px; }
-.player { display: flex; align-items: center; gap: 12px; padding: 12px; border-radius: 10px; background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); box-shadow: 0 4px 12px rgba(0,0,0,0.5); transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease; width: 100%; }
-.player:hover, .player:focus { transform: translateY(-4px); box-shadow: 0 10px 22px rgba(0,0,0,0.6); background: linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)); }
-.player .player-avatar { width: 52px; height: 52px; border-radius: 50%; background-size: cover; background-position: center; border: 2px solid rgba(255,255,255,0.08); flex: 0 0 52px; }
-.player .name { flex: 1 1 auto; font-weight: 600; color: #f5f5f5; }
-.player .score { flex: 0 0 70px; text-align: right; font-weight: 700; color: #ffffff; }
+.top-card:hover, 
+.top-card:focus { 
+    transform: translateY(-6px); 
+    box-shadow: 0 10px 22px rgba(2, 2, 2, 0.9); 
+}
 
+.top-card .rank { 
+    font-size: 14px; 
+    color: #ffffff; 
+    text-align: center; 
+    margin-top: 2px; 
+    font-weight: 700; 
+}
+
+.top-card .rank.crown { 
+    font-size: 18px; 
+    margin-top: 0; 
+}
+
+.top-card .avatar { 
+    width: 76px; 
+    height: 76px; 
+    border-radius: 50%; 
+    background-size: cover; 
+    background-position: center; 
+    border: 3px solid #ffffff; 
+    box-shadow: 0 6px 18px rgba(0,0,0,0.65); 
+}
+
+.top-card.first .avatar { 
+    width: 96px; 
+    height: 96px; 
+}
+
+.top-card .label { 
+    margin-top: 6px; 
+    text-align: center; 
+}
+
+.top-card .label .name { 
+    display: block; 
+    font-size: 14px; 
+    color: #eaeaea; 
+    font-weight: 700; 
+}
+
+.top-card .label .score { 
+    display: block; 
+    font-size: 13px; 
+    color: #bdbdbd; 
+    margin-top: 4px; 
+}
+
+/* ===== ALL PLAYERS SECTION ===== */
+.all-players {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.all-players h3 { 
+    margin: 12px 0 8px; 
+    text-align: flex-start; 
+    color: #f2f2f2; 
+    width: 100%; 
+}
+
+.players-header { 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    padding: 10px 12px; 
+    width: calc(100% - 32px); 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    font-weight: 700; 
+    color: #999999; 
+    font-size: 12px; 
+    letter-spacing: 0.5px; 
+}
+
+.players-header .rank-label { 
+    flex: 0 0 40px; 
+}
+
+.players-header .name-label { 
+    flex: 1 1 auto; 
+}
+
+.players-header .score-label { 
+    flex: 0 0 70px; 
+    text-align: right; 
+}
+
+.players-list { 
+    list-style: none; 
+    width: calc(100% - 32px); 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 6px; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 12px; 
+}
+
+.player { 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    padding: 12px; 
+    border-radius: 10px; 
+    background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5); 
+    transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease; 
+    width: 100%; 
+}
+
+.player:hover, 
+.player:focus { 
+    transform: translateY(-4px); 
+    box-shadow: 0 10px 22px rgba(0,0,0,0.6); 
+    background: linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)); 
+}
+
+.player .rank { 
+    width: 36px; 
+    height: 36px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    border-radius: 50%; 
+    font-weight: 700; 
+    font-size: 13px; 
+    background: rgba(255,255,255,0.1); 
+    color: #ffffff; 
+    flex: 0 0 36px; 
+}
+
+.player .rank.trophy { 
+    background: rgba(255,255,255,0.1); 
+    color: #ffffff; 
+}
+
+.player .player-avatar { 
+    width: 52px; 
+    height: 52px; 
+    border-radius: 50%; 
+    background-size: cover; 
+    background-position: center; 
+    border: 2px solid rgba(255,255,255,0.4); 
+    flex: 0 0 52px; 
+}
+
+.player .name { 
+    flex: 1 1 auto; 
+    font-weight: 600; 
+    color: #f5f5f5; 
+}
+
+.player .score { 
+    flex: 0 0 70px; 
+    text-align: right; 
+    font-weight: 700; 
+    color: #ffffff; 
+}
+
+/* ===== MOBILE: TABLET (640px) ===== */
+@media (max-width: 640px) {
+    .top-players { 
+        gap: 10px; 
+        flex-wrap: wrap; 
+    }
+    
+    .top-card { 
+        width: 140px; 
+        padding: 10px 12px; 
+    }
+    
+    .top-card.first { 
+        width: 160px; 
+        transform: translateY(-4px); 
+    }
+    
+    .top-card .avatar { 
+        width: 60px; 
+        height: 60px; 
+    }
+    
+    .top-card.first .avatar { 
+        width: 72px; 
+        height: 72px; 
+    }
+    
+    .top-card .rank { 
+        font-size: 12px; 
+    }
+    
+    .top-card .label .name { 
+        font-size: 12px; 
+    }
+    
+    .top-card .label .score { 
+        font-size: 11px; 
+    }
+    
+    .players-header { 
+        gap: 8px; 
+        padding: 8px 10px; 
+        font-size: 11px; 
+        width: calc(100% - 20px); 
+    }
+    
+    .players-header .rank-label { 
+        flex: 0 0 30px; 
+    }
+    
+    .players-header .score-label { 
+        flex: 0 0 50px; 
+    }
+    
+    .players-list { 
+        width: calc(100% - 20px); 
+        gap: 10px; 
+    }
+    
+    .player { 
+        padding: 10px; 
+        gap: 10px; 
+    }
+    
+    .player .rank { 
+        width: 32px; 
+        height: 32px; 
+        font-size: 12px; 
+        flex: 0 0 32px; 
+    }
+    
+    .player .player-avatar { 
+        width: 44px; 
+        height: 44px; 
+        flex: 0 0 44px; 
+    }
+    
+    .player .name { 
+        font-size: 13px; 
+    }
+    
+    .player .score { 
+        flex: 0 0 50px; 
+        font-size: 12px; 
+    }
+}
+
+/* ===== MOBILE: PHONE (520px) ===== */
 @media (max-width: 520px) {
-    .player { padding: 10px; gap: 8px; }
-    .player .player-avatar { width: 44px; height: 44px; }
-    .player .rank { width: 36px; height: 36px; }
-    .player .score { flex-basis: 56px; }
+    .top-card { 
+        width: 110px; 
+        padding: 8px 10px; 
+        gap: 6px; 
+    }
+    
+    .top-card.first { 
+        width: 130px; 
+        transform: translateY(-2px); 
+    }
+    
+    .top-card .avatar { 
+        width: 50px; 
+        height: 50px; 
+    }
+    
+    .top-card.first .avatar { 
+        width: 60px; 
+        height: 60px; 
+    }
+    
+    .top-card .rank { 
+        font-size: 11px; 
+        margin-top: 0; 
+    }
+    
+    .top-card .label { 
+        margin-top: 4px; 
+    }
+    
+    .top-card .label .name { 
+        font-size: 11px; 
+    }
+    
+    .top-card .label .score { 
+        font-size: 10px; 
+        margin-top: 2px; 
+    }
+    
+    .players-header { 
+        padding: 6px 8px; 
+        gap: 6px; 
+        font-size: 10px; 
+        width: calc(100% - 16px); 
+    }
+    
+    .players-header .rank-label { 
+        flex: 0 0 25px; 
+    }
+    
+    .players-header .score-label { 
+        flex: 0 0 40px; 
+    }
+    
+    .players-list { 
+        width: calc(100% - 16px); 
+        gap: 8px; 
+        padding: 4px; 
+    }
+    
+    .player { 
+        padding: 8px; 
+        gap: 8px; 
+        border-radius: 8px; 
+    }
+    
+    .player .rank { 
+        width: 28px; 
+        height: 28px; 
+        font-size: 10px; 
+        flex: 0 0 28px; 
+    }
+    
+    .player .player-avatar { 
+        width: 40px; 
+        height: 40px; 
+        flex: 0 0 40px; 
+    }
+    
+    .player .name { 
+        font-size: 12px; 
+    }
+    
+    .player .score { 
+        flex: 0 0 40px; 
+        font-size: 11px; 
+    }
 }
